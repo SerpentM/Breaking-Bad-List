@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@500&display=swap");
+.App {
+  font-family: "Georama", sans-serif;
+  text-align: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: #272727;
+}
+
+/* Headder Search Bar */
+
+.header {
+  padding: 30px;
+}
+.search-box {
+  width: 60%;
+  position: relative;
+  display: flex;
+}
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid rgb(245, 101, 76);
+  border-radius: 10px 0 0 10px;
+  border-right: none;
+  outline: none;
+  font-size: 20px;
+  color: rgb(245, 101, 76);
+  background: none;
+}
+.search-button {
+  text-align: center;
+  height: 60px;
+  width: 40px;
+  outline: none;
+  cursor: pointer;
+  border: 4px solid rgb(245, 101, 76);
+  border-radius: 0 10px 10px 0;
+  background: none;
+  font-size: 20px;
+  border-left: 4px solid rgb(245, 101, 76);
+  color: tomato;
+}
+
+/* Card body section */
+.cardContainer {
+  padding-left: 80px;
+  padding-right: 80px;
+  align-items: center;
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: auto;
+  opacity: 0.8;
+}
+.card {
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #effffb;
+}
+
+.imageContainer img {
+  width: 400px;
+  heigth: auto;
+}
+.cardQuote {
+  width: 60%;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+/* Pagination Style */
+.pagination {
+  text-align: center;
+  margin-left: 480px;
+}
+.paginationBttns {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  list-style: none;
+}
+.paginationBttns a {
+  list-style: none;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 868px) {
+  .search-box {
+    width: 100%;
+  }
+  .cardContainer {
+    left: 0;
+    padding-right: 100px;
+  }
+  .card {
+    display: grid;
+    grid-template-areas: "image" "body foot";
+    width: 16rem;
+  }
+  .imageContainer img {
+    grid-area: "image";
+    width: 100%;
+    height: auto;
+  }
+  .cardQuote {
+    grid-area: "foot";
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .card-body {
+    grid-area: "body";
+  }
+  .pagination {
+    text-align: center;
+    margin-left: 200px;
+  }
+  .paginationBttns {
+    width: 10px;
+  }
+}
